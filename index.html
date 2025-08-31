@@ -1,1 +1,169 @@
-Teste
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aulas - Fundamentos Python</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #d39a0a;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    nav {
+      width: 250px;
+      background-color: #34495e;
+      color: white;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    nav h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0.5rem 0;
+    }
+
+    nav ul li button {
+      width: 100%;
+      background: none;
+      border: none;
+      color: white;
+      text-align: left;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0.3rem 0.5rem;
+      transition: background 0.3s;
+    }
+
+    nav ul li button:hover {
+      background-color: #2c3e50;
+    }
+
+    .content {
+      flex: 1;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .video-frame {
+      width: 80%;
+      height: 500px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    .exercise-box {
+      background-color: #ecf0f1;
+      padding: 1rem;
+      margin: 1rem;
+      border-left: 4px solid #3498db;
+    }
+
+    nav ul li button.active {
+      background-color: #1abc9c;
+    }
+
+
+    @media (max-width: 768px) {
+      nav {
+        width: 100%;
+      }
+
+      .content {
+        width: 100%;
+      }
+
+      .video-frame {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Aulas - Fundamentos Python
+  </header>
+
+  <main>
+    <nav>
+      <h2>Vídeos da Playlist</h2>
+      <ul>
+        <li><button onclick="loadVideo('bKHbsOX4iPc', event)">Instalação do Python</button></li>
+        <li><button onclick="loadVideo('1m8YDGYTM8Q', event)">Instalacao do VStudio  </button></li>
+        <li><button onclick="loadVideo('UsqXWx7dTUY', event)">Alterando tema do VSCODE</button></li>
+        <li><button onclick="loadVideo('0n1x6AVIehI', event)">Variaveis</button></li>
+        <li><button onclick="loadVideo('MTC2U6-PADI', event)">Saida de Dados (PRINT)</button></li>
+        <li><button onclick="loadVideo('BQwmEJ037MA', event)">Tipos e conversão de variaveis</button></li>
+        <li><button onclick="loadVideo('eScrsRMCIho', event)">Entrada de Dados</button></li>
+        <li><button onclick="loadVideo('6-0hI-ZqPCE', event)">Decisões</button></li>
+        <li><button onclick="loadVideo('b1pZfB-PeMg', event)">Operacoes Logicas</button></li>
+        <li><button onclick="loadVideo('-LxDKjfc6ZI', event)">Repeticoes condicionais While</button></li>
+        <li><button onclick="loadVideo('gNtQYGvTcug', event)">Repeticoes condicionais FOR</button></li>
+        <li><button onclick="loadVideo('airD_TNq-rc', event)">Listas de dados</button></li>
+        <li><button onclick="loadVideo('JUZvkA4XIwg', event)">Importando Modulos (bibliotecas)</button></li>
+        <li><button onclick="loadVideo('ptid_GNxFCA', event)">Melhorado o codigo com Funcoes</button></li>
+        
+        
+   
+
+
+      </ul>
+    </nav>
+
+    <div class="content">
+      <iframe id="videoFrame" class="video-frame" src="https://www.youtube.com/embed/bKHbsOX4iPc" allowfullscreen></iframe>
+
+      <div class="exercise-box">
+        <h3>Em breve... </h3>
+        <ul>
+          <li> </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <script>
+  function loadVideo(videoId) {
+  const iframe = document.getElementById('videoFrame');
+  iframe.src = 'https://www.youtube.com/embed/' + videoId;
+
+  // Remove classe ativa de todos os botões
+  document.querySelectorAll('nav ul li button').forEach(btn => btn.classList.remove('active'));
+
+  // Adiciona classe ativa ao botão clicado
+  event.target.classList.add('active');
+}
+  </script>
+</body>
+</html>
